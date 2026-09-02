@@ -4,7 +4,6 @@
   --panel-2: #1a1a1f;
   --stage: #17171c;
   --text: #f5f5f7;
-  --text-secondary: #d8d7dc;
   --muted: #9b99a2;
   --muted-2: #727079;
   --line: rgba(255, 255, 255, 0.08);
@@ -15,24 +14,6 @@
   --radius-md: 20px;
   --radius-sm: 12px;
   --shell: 1280px;
-}
-
-html[data-theme="light"] {
-  --bg: #f2f2f4;
-  --panel: #ffffff;
-  --panel-2: #f2f2f4;
-  --stage: #e8e8ec;
-
-  --text: #161619;
-  --text-secondary: #3f3f46;
-  --muted: #62626a;
-  --muted-2: #898991;
-
-  --line: rgba(0, 0, 0, 0.08);
-  --line-strong: rgba(0, 0, 0, 0.14);
-
-  --lime: #84a600;
-  --cyan: #008e99;
 }
 
 * {
@@ -53,21 +34,6 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-html.theme-transition body,
-html.theme-transition .panel,
-html.theme-transition .stack-item,
-html.theme-transition .contact-links a,
-html.theme-transition .segmented-control,
-html.theme-transition .preference-button,
-html.theme-transition .project-front,
-html.theme-transition .project-back {
-  transition:
-    background-color 320ms ease,
-    color 320ms ease,
-    border-color 320ms ease,
-    box-shadow 320ms ease;
 }
 
 button,
@@ -143,13 +109,6 @@ img {
   gap: 18px;
 }
 
-.hero-area {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 180px;
-  gap: 18px;
-  align-items: stretch;
-}
-
 .hero-card {
   min-height: 0;
   overflow: hidden;
@@ -159,7 +118,7 @@ img {
 }
 
 .hero-copy {
-  padding: 24px;
+  padding: 24px 28px;
   align-self: center;
 }
 
@@ -189,10 +148,10 @@ img {
 }
 
 .hero-text {
-  margin: 8px 0 0;
+  margin: 14px 0 0;
   color: var(--muted);
   font-size: 0.88rem;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 .hero-text strong {
@@ -201,7 +160,7 @@ img {
 }
 
 .location-line {
-  margin: 12px 0 0;
+  margin: 22px 0 0;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -219,95 +178,6 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-
-.preferences-card {
-  padding: 18px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-}
-
-.preference-row {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 7px;
-}
-
-.preference-label {
-  color: var(--muted);
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.segmented-control {
-  display: inline-flex;
-
-  padding: 3px;
-
-  border: 1px solid var(--line);
-  border-radius: 999px;
-
-  background: var(--panel-2);
-}
-
-.preference-button {
-  min-height: 30px;
-  padding: 5px 10px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-
-  border: 0;
-  border-radius: 999px;
-
-  background: transparent;
-  color: var(--muted);
-
-  cursor: pointer;
-  font-size: 0.68rem;
-
-  transition:
-    background 180ms ease,
-    color 180ms ease;
-}
-
-.preference-icon {
-  width: 13px;
-  height: 13px;
-  flex-shrink: 0;
-
-  background-color: currentColor;
-
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-}
-
-.preference-icon--moon {
-  mask-image: url("assets/icons/moon.svg");
-  -webkit-mask-image: url("assets/icons/moon.svg");
-}
-
-.preference-icon--sun {
-  mask-image: url("assets/icons/sun.svg");
-  -webkit-mask-image: url("assets/icons/sun.svg");
-}
-
-.preference-button.is-active {
-  background: rgba(204, 255, 0, 0.12);
-  color: var(--lime);
 }
 
 
@@ -399,7 +269,7 @@ img {
   min-height: 30px;
   padding: 5px 10px;
   background: var(--panel-2);
-  color: var(--text-secondary);
+  color: #d8d7dc;
   font-size: 0.72rem;
 }
 
@@ -441,7 +311,7 @@ img {
 }
 
 .learning-row strong {
-  color: var(--text-secondary);
+  color: #ececf0;
   font-size: 0.78rem;
   font-weight: 600;
 }
@@ -483,7 +353,7 @@ img {
   border-radius: 9px;
   background: var(--panel-2);
 
-  color: var(--text-secondary);
+  color: #d8d7dc;
   text-align: center;
   font-size: 0.58rem;
 }
@@ -514,7 +384,7 @@ img {
   border: 1px solid var(--line);
   border-radius: 11px;
   background: var(--panel-2);
-  color: var(--text-secondary);
+  color: #dfdee3;
   font-size: 0.75rem;
   transition:
     border-color 180ms ease,
