@@ -308,6 +308,8 @@ const translations = {
   en: {
     role: "UX/UI Designer",
 
+    heroName: "Daria Lebedeva",
+
     heroText:
       'UX/UI designer with an engineering background, focused on complex <strong>B2B products</strong>, <strong>data-heavy interfaces</strong>, and clear structured user experiences.',
 
@@ -319,22 +321,69 @@ const translations = {
 
     language:
       "Language",
+    
+    learningTitle:
+     "Learning &amp; Certifications",
+
+   statusCompleted:
+     "2026 · completed",
+
+   statusInprogress:
+    "in progress",
+
+    expertiseTitle:
+     "Expertise",
+
+    uxuiDesign:
+    "UX/UI Design",
+
+    productDesign:
+    "Product Design",
+
+    responsive:
+    "Responsive Web Design",
+
+    mobile:
+    "Mobile App",
+
+    designSystems:
+    "Design Systems",
+
+    dataVisualization:
+    "Data Visualization",
+
+    english:
+    "English · B2",
+
+    italian:
+    "Italian · A2",
+
+    serbian:
+    "Serbian · Beginner",
 
     aboutTitle:
       "About",
+
+   aboutText:
+   "I design clear, reliable interfaces for complex products and technical workflows, combining UX thinking, systems thinking, and an engineering mindset.",
 
     stackTitle:
       "Stack & Tools",
 
     contactTitle:
       "Let's Connect",
+
+      contactText:
+      "I’m open to product design opportunities, collaborations, and interesting technical challenges.",
   },
 
   ru: {
     role: "UX/UI Дизайнер",
 
+    heroname: "Дарья Лебедева",
+
     heroText:
-      'UX/UI дизайнер с инженерным бэкграундом, сфокусированный на сложных <strong>B2B-продуктах</strong>, <strong>интерфейсах с большим количеством данных</strong> и понятном структурированном пользовательском опыте.',
+      'UX/UI-дизайнер с инженерным опытом, специализируюсь на сложных<strong>B2B-продуктах</strong> и <strong>data-heavy</strong> интерфейсах.',
 
     location:
       "Белград, Сербия",
@@ -345,14 +394,59 @@ const translations = {
     language:
       "Язык",
 
+    learningTitle:
+     "Обучение и сертификаты",
+
+   statusCompleted:
+    "2026 · завершено",
+
+    statusInprogress:
+    "в процессе",
+
+    expertiseTitle:
+    "Экспертиза",
+
+    uxuiDesign:
+    "UX/UI-дизайн",
+
+    productDesign:
+    "Продуктовый дизайн",
+
+    responsive:
+    "Адаптивный веб-дизайн",
+
+    mobile:
+    "Дизайн мобильных приложений",
+
+    designSystems:
+    "Дизайн-системы",
+
+    dataVisualization:
+    "Визуализация данных",
+
+    english:
+    "Английский · B2",
+
+    italian:
+    "Итальянский · A2",
+
+    serbian:
+    "Сербский · начальный уровень",
+
     aboutTitle:
       "Обо мне",
+
+    aboutText:
+    "Я создаю понятные и надёжные интерфейсы для сложных продуктов и технических процессов, сочетая UX-мышление, системный подход и инженерный взгляд.",
 
     stackTitle:
       "Инструменты",
 
     contactTitle:
       "Связаться",
+
+      contactText:
+      "Открыта к новым проектам и интересным техническим задачам.",
   },
 };
 
