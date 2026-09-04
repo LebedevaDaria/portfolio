@@ -160,7 +160,6 @@ img {
 
 .hero-copy {
   padding: 24px;
-  align-self: center;
 }
 
 .eyebrow {
@@ -1033,6 +1032,38 @@ img {
   }
 }
 
+@media (min-width: 981px) {
+
+  /* Вся левая колонка растягивается на высоту правой */
+  .intro-main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 240px 1fr;
+    gap: 18px;
+  }
+
+  /* Верхняя строка: Hero + Theme/Language */
+  .hero-area {
+    height: 240px;
+  }
+
+  .hero-card,
+  .preferences-card {
+    height: 100%;
+  }
+
+  /* Нижняя строка */
+  .intro-main-bottom {
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .learning-card,
+  .expertise-card {
+    height: 100%;
+  }
+}
+
 @media (max-width: 720px) {
   
 
@@ -1040,6 +1071,40 @@ img {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+
+  .intro-main {
+    height: auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 18px;
+  }
+
+  .hero-area {
+    height: auto;
+    align-items: stretch;
+  }
+
+  .hero-card,
+  .preferences-card {
+    height: auto;
+  }
+
+  .hero-card {
+    overflow: hidden;
+  }
+
+  .intro-main-bottom {
+    height: auto;
+    align-items: stretch;
+  }
+
+  .learning-card,
+  .expertise-card {
+    height: 100%;
+  }
 }
 
 @media (max-width: 460px) {
