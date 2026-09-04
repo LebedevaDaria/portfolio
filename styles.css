@@ -256,7 +256,9 @@ img {
 }
 
 .segmented-control {
-  display: inline-flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   padding: 3px;
 
@@ -270,10 +272,12 @@ img {
   min-height: 30px;
   padding: 5px 10px;
 
+  width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 8px;
+  text-align: center;
 
   border: 0;
   border-radius: 999px;
