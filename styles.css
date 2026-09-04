@@ -465,6 +465,12 @@ img {
   color: #b9faff;
 }
 
+[data-theme="light"] .expertise-tags .language-tag {
+  background: rgba(0, 150, 165, 0.16);
+  border-color: rgba(0, 125, 140, 0.28);
+  color: #006A73;
+}
+
 
 /* LEARNING */
 

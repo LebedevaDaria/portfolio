@@ -323,7 +323,7 @@ const translations = {
       "Language",
     
     learningTitle:
-     "Learning &amp; Certifications",
+     "Learning & Certifications",
 
    statusCompleted:
      "2026 · completed",
