@@ -375,6 +375,30 @@ const translations = {
 
       contactText:
       "I’m open to product design opportunities, collaborations, and interesting technical challenges.",
+
+      analyticsTitle:
+      "Analytics Dashboard",
+
+      analyticsText1:
+      "An internal analytics platform for monitoring customer activity, license usage, and product consumption.",
+
+      analyticsText2:
+      "I designed the dashboard system from scratch together with a data analyst, translating business requirements into clear data views, multi-level filtering and sorting, and export-ready tables.",
+
+      analyticsText3:
+      "The interface supports flexible data exploration and efficient reporting while working within the existing component library and technical constraints.",
+
+      selfServiceTitle:
+      "Self-Service Monitoring App",
+
+      selfServiceText1:
+      "A B2B mobile app for owners and operators of self-service devices connected to a payment and monitoring platform.",
+
+      selfServiceText2:
+      "I designed the end-to-end mobile journey around revenue analytics, payment breakdowns, cash collection, and technical device states.",
+
+      selfServiceText3:
+      "The interface helps users quickly understand what is happening at each location and which devices require attention.",
   },
 
   ru: {
@@ -447,6 +471,30 @@ const translations = {
 
       contactText:
       "Открыта к новым проектам и интересным техническим задачам.",
+
+      analyticsTitle:
+      "Аналитический дашборд",
+
+      analyticsText1:
+      "Внутренняя аналитическая платформа для мониторинга активности клиентов, использования лицензий и продуктов.",
+
+      analyticsText2:
+      "Я спроектировала систему дашбордов с нуля совместно с аналитиком данных, преобразовав бизнес-требования в понятные представления данных, многоуровневую фильтрацию и сортировку, а также таблицы с возможностью экспорта.",
+
+      analyticsText3:
+      "Интерфейс позволяет гибко исследовать данные и эффективно формировать отчётность с учётом существующей библиотеки компонентов и технических ограничений.",
+
+      selfServiceTitle:
+      "Приложение для мониторинга устройств самообслуживания",
+
+      selfServiceText1:
+      "B2B-мобильное приложение для владельцев и операторов устройств самообслуживания, подключённых к платёжной и мониторинговой платформе.",
+
+      selfServiceText2:
+      "Я спроектировала полный пользовательский сценарий вокруг аналитики выручки, структуры платежей, инкассации и технических состояний устройств.",
+
+      selfServiceText3:
+      "Интерфейс помогает быстро понять, что происходит на каждой точке и какие устройства требуют внимания.",
   },
 };
 
