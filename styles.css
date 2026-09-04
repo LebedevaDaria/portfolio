@@ -1136,6 +1136,7 @@ img {
     grid-template-columns: 1fr;
   }
 
+  /* Preferences */
   .preferences-card {
     display: grid;
     grid-template-columns: 1fr;
@@ -1158,12 +1159,50 @@ img {
     width: 100%;
   }
 
+
+  /* Learning и Expertise — на всю ширину */
   .learning-card,
-  .expertise-card,
-  .stack-card,
-  .contact-card {
+  .expertise-card {
     grid-column: 1 / -1;
   }
+
+
+  /* Правая часть */
+  .intro-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "about about"
+      "stack contact";
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .about-card {
+    grid-area: about;
+  }
+
+  .stack-card {
+  grid-area: stack;
+
+  display: flex;
+  flex-direction: column;
+}
+
+  .contact-card {
+    grid-area: contact;
+  }
+
+
+  /* В половинной Stack-карточке 3 колонки уже тесноваты */
+  .stack-grid {
+  flex: 1;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+
+  align-items: stretch;
+}
 }
 
 @media (max-width: 460px) {
