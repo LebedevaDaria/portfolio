@@ -376,6 +376,12 @@ const translations = {
       contactText:
       "I’m open to product design opportunities, collaborations, and interesting technical challenges.",
 
+      view:
+      "View details",
+      
+      back:
+      "Back",
+
       analyticsTitle:
       "Analytics Dashboard",
 
@@ -399,6 +405,54 @@ const translations = {
 
       selfServiceText3:
       "The interface helps users quickly understand what is happening at each location and which devices require attention.",
+
+      autogradingTitle:
+      "Autograding System",
+
+      autogradingText1:
+      "A product education page for an ML-powered mobile-device grading platform, created to reduce the need for manual client training.",
+
+      autogradingText2:
+      "A product education page for an ML-powered mobile-device grading platform, created to reduce the need for manual client training.",
+
+      autogradingText3:
+      "A product education page for an ML-powered mobile-device grading platform, created to reduce the need for manual client training.",
+
+      trackerTitle:
+      "Team Tracker",
+
+      trackerText1:
+      "A web service for creating, running, editing, and monitoring reusable timer-trackers.",
+
+      trackerText2:
+      "I designed the interaction logic and interface states, focusing on making timer status, remaining time, actions, and editing behavior easy to understand at a glance.",
+
+      trackerText3:
+      "I also supported the front-end implementation to keep the built product aligned with the intended UX.",
+
+      robotTitle:
+      "Device Grading Robot Interface",
+
+      robotText1:
+      "A touchscreen interface for an automated system that evaluates the cosmetic and technical condition of mobile devices.",
+
+      robotText2:
+      "The machine combines multi-angle photography, machine-learning-based cosmetic grading, and technical tests for the display, speakers, battery, and other components.",
+
+      robotText3:
+      "I designed a clear operator workflow with step-by-step guidance, touch-friendly controls, test progress, and detailed results for each completed check.",
+
+      scadaTitle:
+      "SCADA System Interface",
+
+      scadaText1:
+      "A technical web-interface concept for a SCADA system, designed around the workflow of connecting an external data source and loading variables.",
+
+      scadaText2:
+      "I translated a dense technical scenario into a structured configuration flow with clear hierarchy, states, and controls.",
+
+      scadaText3:
+      "The project helped me explore interaction patterns for complex engineering software and data-heavy industrial interfaces.",
   },
 
   ru: {
@@ -472,6 +526,12 @@ const translations = {
       contactText:
       "Открыта к новым проектам и интересным техническим задачам.",
 
+      view:
+      "Подробнее",
+
+      back:
+      "Назад",
+
       analyticsTitle:
       "Аналитический дашборд",
 
@@ -495,6 +555,54 @@ const translations = {
 
       selfServiceText3:
       "Интерфейс помогает быстро понять, что происходит на каждой точке и какие устройства требуют внимания.",
+
+      autogradingTitle:
+      "Система автоматической оценки",
+
+      autogradingText1:
+      "Обучающая страница для ML-платформы автоматической оценки мобильных устройств, созданная, чтобы сократить потребность в ручном обучении клиентов.",
+
+      autogradingText2:
+      "Я использовала обратную связь от поддержки, чтобы выявить вопросы и проблемные места пользователей, а затем вместе с продуктовой и аналитической командами прошла путь от низкодетальной структуры до финального интерфейса.",
+
+      autogradingText3:
+      "В результате страница объясняет процесс оценки, проводит пользователя по основным шагам и помогает быстро найти нужную информацию по поддержке.",
+
+      trackerTitle:
+      "Командный трекер",
+
+      trackerText1:
+      "Веб-сервис для создания, запуска, редактирования и мониторинга многоразовых таймеров-трекеров.",
+
+      trackerText2:
+      "Я спроектировала логику взаимодействия и состояния интерфейса так, чтобы статус таймера, оставшееся время, доступные действия и редактирование были понятны с первого взгляда.",
+
+      trackerText3:
+      "Также я участвовала во фронтенд-реализации, чтобы готовый продукт соответствовал задуманному UX.",
+
+      robotTitle:
+      "Интерфейс touchscreen экрана",
+
+      robotText1:
+      "Интерфейс для сенсорного экрана автоматизированной системы, которая оценивает косметическое и техническое состояние мобильных устройств.",
+
+      robotText2:
+      "Система сочетает съёмку устройства с разных ракурсов, ML-оценку внешнего состояния и технические тесты экрана, динамиков, батареи и других компонентов.",
+
+      robotText3:
+      "Я спроектировала понятный сценарий работы оператора с пошаговыми инструкциями, удобными для сенсорного экрана элементами управления, отображением прогресса тестирования и подробными результатами каждой проверки.",
+
+      scadaTitle:
+      "Интерфейс SCADA-системы",
+
+      scadaText1:
+      "Концепт технического веб-интерфейса для SCADA-системы, построенный вокруг сценария подключения внешнего источника данных и загрузки переменных.",
+
+      scadaText2:
+      "Я преобразовала сложный технический сценарий в структурированный процесс настройки с понятной иерархией, состояниями и элементами управления.",
+
+      scadaText3:
+      "Проект позволил мне проработать паттерны взаимодействия для сложного инженерного ПО и промышленных интерфейсов с большим объёмом данных.",
   },
 };
 
