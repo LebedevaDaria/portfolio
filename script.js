@@ -461,7 +461,7 @@ const translations = {
     heroname: "Дарья Лебедева",
 
     heroText:
-      'UX/UI-дизайнер с инженерным опытом, специализируюсь на сложных<strong>B2B-продуктах</strong> и <strong>data-heavy</strong> интерфейсах.',
+      'UX/UI-дизайнер с инженерным опытом, специализируюсь на сложных <strong>B2B-продуктах</strong> и <strong>data-heavy</strong> интерфейсах.',
 
     location:
       "Белград, Сербия",
