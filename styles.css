@@ -998,6 +998,14 @@ img {
   .stack-item {
     width: auto;
   }
+
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -1044,7 +1052,9 @@ img {
     grid-area: location;
     margin: 0;
   }
+
 }
+
 
 @media (max-width: 840px) {
   .contact-card .contact-links {
