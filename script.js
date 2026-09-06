@@ -746,3 +746,171 @@ const savedLanguage =
   DEFAULT_LANGUAGE;
 
 setLanguage(savedLanguage);
+
+const projectGrid = document.querySelector(".projects-grid");
+
+if (projectGrid) {
+  const projectCards = [...projectGrid.querySelectorAll(".project-card")];
+
+  const PROJECT_SINGLE_COLUMN = 1024;
+  const PROJECT_RATIO = 5 / 8;
+
+  let projectHeightFrame = null;
+
+
+  function getProjectBaseHeight(card) {
+    return card.getBoundingClientRect().width * PROJECT_RATIO;
+  }
+
+
+  function getProjectBackHeight(card) {
+    const back = card.querySelector(".project-back");
+    const content = card.querySelector(".project-back-content");
+    const backButton = back?.querySelector(".project-flip-button");
+
+    if (!back || !content) {
+      return getProjectBaseHeight(card);
+    }
+
+    const backStyles = getComputedStyle(back);
+
+    const paddingTop =
+      parseFloat(backStyles.paddingTop) || 0;
+
+    const paddingBottom =
+      parseFloat(backStyles.paddingBottom) || 0;
+
+
+    let buttonHeight = 0;
+
+if (backButton) {
+  buttonHeight = backButton.offsetHeight;
+}
+
+const gap =
+  parseFloat(backStyles.rowGap) || 0;
+
+
+    const contentHeight = content.scrollHeight;
+
+    const requiredHeight =
+  paddingTop +
+  contentHeight +
+  gap +
+  buttonHeight +
+  paddingBottom;
+
+
+    return Math.max(
+      getProjectBaseHeight(card),
+      requiredHeight
+    );
+  }
+
+
+  function getRequiredProjectHeight(card) {
+    if (card.classList.contains("is-flipped")) {
+      return getProjectBackHeight(card);
+    }
+
+    return getProjectBaseHeight(card);
+  }
+
+
+  function syncProjectHeights() {
+    projectHeightFrame = null;
+
+    /*
+      После 1024 проекты стоят по одному.
+      Каждая карточка рассчитывается отдельно.
+    */
+    if (window.innerWidth <= PROJECT_SINGLE_COLUMN) {
+      projectCards.forEach(card => {
+        const height = getRequiredProjectHeight(card);
+
+        card.style.height = `${Math.ceil(height)}px`;
+      });
+
+      return;
+    }
+
+
+    /*
+      Desktop:
+      работаем парами.
+      Обе карточки ряда получают высоту
+      самой высокой из них.
+    */
+    for (let i = 0; i < projectCards.length; i += 2) {
+      const firstCard = projectCards[i];
+      const secondCard = projectCards[i + 1];
+
+      const firstHeight =
+        getRequiredProjectHeight(firstCard);
+
+      const secondHeight = secondCard
+        ? getRequiredProjectHeight(secondCard)
+        : firstHeight;
+
+
+      const rowHeight = Math.max(
+        firstHeight,
+        secondHeight
+      );
+
+
+      firstCard.style.height =
+        `${Math.ceil(rowHeight)}px`;
+
+      if (secondCard) {
+        secondCard.style.height =
+          `${Math.ceil(rowHeight)}px`;
+      }
+    }
+  }
+
+
+  function scheduleProjectHeightSync() {
+    if (projectHeightFrame) {
+      cancelAnimationFrame(projectHeightFrame);
+    }
+
+    projectHeightFrame =
+      requestAnimationFrame(syncProjectHeights);
+  }
+
+
+  /*
+    Следим за:
+    - flip / back;
+    - сменой EN / RU;
+    - изменением текста.
+  */
+  const projectObserver = new MutationObserver(
+    scheduleProjectHeightSync
+  );
+
+  projectObserver.observe(projectGrid, {
+    subtree: true,
+    childList: true,
+    characterData: true,
+    attributes: true,
+    attributeFilter: ["class"]
+  });
+
+
+  window.addEventListener(
+    "resize",
+    scheduleProjectHeightSync
+  );
+
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(
+      scheduleProjectHeightSync
+    );
+  }
+
+
+  scheduleProjectHeightSync();
+}
