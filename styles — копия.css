@@ -52,6 +52,38 @@ html {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Geist";
+  src: url("assets/fonts/Geist-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("assets/fonts/Geist-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("assets/fonts/Geist-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -78,9 +110,29 @@ html.theme-transition .project-back {
     box-shadow 320ms ease;
 }
 
+
+h1,
+h2,
+h3 {
+  font-family: "Geist", Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.eyebrow,
+.meta,
+.project-tags,
+.expertise-tags,
+.status {
+  font-family: "JetBrains Mono", monospace;
+}
+
+button {
+  font: inherit;
+}
+
 button,
 a {
-  font: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -91,6 +143,11 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+::selection {
+  background: var(--lime);
+  color: #0b0b0d;
 }
 
 .shell {
@@ -122,41 +179,16 @@ img {
   letter-spacing: 0.02em;
 }
 
-
 .intro-section {
   padding-top: 34px;
-  padding-bottom: 0;
+  padding-bottom: 0px;
 }
 
 .intro-grid {
   display: grid;
-  grid-template-columns: 700px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
   gap: 18px;
   align-items: stretch;
-}
-
-.intro-left,
-.intro-right {
-  min-width: 0;
-  display: grid;
-  gap: 18px;
-  align-content: stretch;
-}
-
-.intro-left {
-  grid-template-rows: 240px auto;
-}
-
-.intro-left-bottom {
-  min-width: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-.intro-right {
-  grid-template-rows: auto auto auto minmax(0, 1fr);
 }
 
 .panel {
@@ -166,17 +198,33 @@ img {
   background: var(--panel);
 }
 
-/* HERO */
+
+/* LEFT COLUMN */
+
+.intro-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero-area {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  gap: 18px;
+  align-items: stretch;
+}
+
 .hero-card {
   min-height: 0;
   overflow: hidden;
+
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.34fr);
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 0.34fr);
 }
 
 .hero-copy {
   padding: 24px;
-  align-self: start;
 }
 
 .eyebrow {
@@ -184,17 +232,19 @@ img {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-family: "JetBrains Mono", monospace;
 }
 
 .eyebrow--accent {
   display: inline-flex;
   width: fit-content;
   padding: 5px 10px;
+
   border: 1px solid rgba(255, 138, 0, 0.18);
   border-radius: 999px;
+
   background: rgba(255, 138, 0, 0.06);
   color: #C99B6B;
+
   backdrop-filter: blur(6px);
   letter-spacing: 0.03em;
 }
@@ -245,21 +295,21 @@ img {
   object-position: center;
 }
 
-/* PREFERENCES */
+
 .preferences-card {
-  padding: 18px 20px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 18px;
-  align-items: center;
 }
 
 .preference-row {
-  min-width: 0;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: center;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
 }
 
 .preference-label {
@@ -273,38 +323,51 @@ img {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+
   padding: 3px;
+
   border: 1px solid var(--line);
   border-radius: 999px;
+
   background: var(--panel-2);
 }
 
 .preference-button {
   min-height: 30px;
   padding: 5px 10px;
+
   width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   text-align: center;
+
   border: 0;
   border-radius: 999px;
+
   background: transparent;
   color: var(--muted);
+
   cursor: pointer;
   font-size: 0.68rem;
-  transition: background 180ms ease, color 180ms ease;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease;
 }
 
 .preference-icon {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
+
   background-color: currentColor;
+
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
+
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
@@ -325,41 +388,38 @@ img {
   color: var(--lime);
 }
 
-/* CARD PADDING */
+
+/* LEARNING + STACK */
+
+.intro-main-bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .learning-card,
-.expertise-card,
+.stack-card {
+  padding: 24px;
+}
+
+
+/* RIGHT COLUMN */
+
+.intro-side {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 .about-card,
-.stack-card,
+.expertise-card,
 .contact-card {
   padding: 24px;
 }
 
-.learning-card,
-.expertise-card {
-  height: 100%;
-}
-
-.stack-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.stack-card .stack-grid {
-  flex: 1;
-}
-
-/* CONTACT — desktop: text left, buttons right */
 .contact-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-card .contact-links {
-  margin-top: 12px;
-
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
+  flex: 1;
 }
 
 
@@ -437,12 +497,6 @@ img {
   line-height: 1.55;
 }
 
-
-.project-tags,
-.expertise-tags,
-.status {
-  font-family: "JetBrains Mono", monospace;
-}
 
 /* EXPERTISE */
 
@@ -587,7 +641,7 @@ img {
   margin-top: 10px;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -969,38 +1023,7 @@ img {
   }
 }
 
-
-/* RESPONSIVE */
-@media (max-width: 1200px) {
-  .intro-grid {
-    grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
-  }
-
-  .intro-left-bottom {
-    grid-template-columns: 1fr;
-  }
-
-  .preferences-card {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .preference-row {
-    grid-template-columns: 62px minmax(0, 1fr);
-    gap: 12px;
-  }
-
-  .stack-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    justify-content: stretch;
-  }
-
-  .stack-item {
-    width: auto;
-  }
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .hero-card {
     padding: 20px;
 
@@ -1008,10 +1031,10 @@ img {
     grid-template-columns: minmax(0, 1fr) 84px;
     grid-template-areas:
       "heading photo"
-      "text    text"
+      "text text"
       "location location";
 
-    gap: 14px 16px;
+    gap: 16px;
     align-items: center;
   }
 
@@ -1035,105 +1058,264 @@ img {
     overflow: hidden;
   }
 
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .hero-text {
     grid-area: text;
     margin: 0;
+  }
+
+    .eyebrow--accent {
+    border-radius: var(--radius-sm);
   }
 
   .location-line {
     grid-area: location;
     margin: 0;
   }
+
+  .intro-main-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-card,
+  .learning-card,
+  .stack-card,
+  .contact-card {
+    grid-column: span 6;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+   .contact-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  /* Вся левая колонка растягивается на высоту правой */
+  .intro-main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 240px 1fr;
+    gap: 18px;
+  }
+
+  /* Верхняя строка: Hero + Theme/Language */
+  .hero-area {
+    height: 240px;
+  }
+
+  .hero-card,
+  .preferences-card {
+    height: 100%;
+  }
+
+  /* Нижняя строка */
+  .intro-main-bottom {
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .learning-card,
+  .expertise-card {
+    height: 100%;
+  }
 }
 
 @media (max-width: 840px) {
-  .contact-card .contact-links {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+
+  .hero-area {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .hero-card,
+  .preferences-card {
+    height: auto;
+  }
+
+  .preferences-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .preference-row {
+  display: grid;
+  grid-template-columns:
+    minmax(62px, 90px)
+    minmax(190px, 1fr);
+
+  align-items: center;
+  gap: clamp(6px, 1.5vw, 12px);
+}
+
+  .segmented-control {
+    width: 100%;
+  }
+}
+
+@media (min-width: 841px) and (max-width: 1024px) {
+  .hero-area {
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 18px;
+    height: auto;
+    align-items: stretch;
+  }
+
+  .hero-card,
+  .preferences-card {
+    height: auto;
+  }
+
+  .preferences-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .preference-row {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     gap: 8px;
   }
 
-  .contact-card .contact-links a {
+  .segmented-control {
     width: 100%;
-    min-width: 0;
   }
 }
 
 @media (max-width: 600px) {
-  .shell {
-    width: min(var(--shell), calc(100% - 24px));
+
+    .project-card.is-expanded .project-back-content > p {
+    display: block;
   }
 
-  .section {
-    padding-bottom: 52px;
+}
+
+
+@media (min-width: 461px) and (max-width: 600px) {
+
+  .intro-grid,
+  .intro-main-bottom {
+    grid-template-columns: 1fr;
   }
 
-  /* Сетка оставляет 2 колонки только для Stack + Contacts */
-  .intro-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /*
-    Убираем влияние промежуточных обёрток на сетку.
-    Карточки становятся непосредственными grid-элементами.
-  */
-  .intro-left,
-  .intro-left-bottom,
-  .intro-right {
-    display: contents;
-  }
-
-  /* Hero — первая */
-  .hero-card {
-    grid-column: 1 / -1;
-    order: 1;
-  }
-
-  /* Preferences сразу после Hero */
+  /* Preferences */
   .preferences-card {
-    grid-column: 1 / -1;
-    order: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    gap: 14px;
   }
 
-  /* Затем обучение */
-  .learning-card {
-    grid-column: 1 / -1;
-    order: 3;
+  .preferences-card > .preference-row {
+    grid-column: 1;
   }
 
-  /* Затем экспертиза */
+  .preference-row {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+  }
+
+  .segmented-control {
+    width: 100%;
+  }
+
+
+  /* Learning и Expertise — на всю ширину */
+  .learning-card,
   .expertise-card {
     grid-column: 1 / -1;
-    order: 4;
   }
 
-  /* About */
+
+  /* Правая часть */
+  .intro-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "about about"
+      "stack contact";
+    gap: 18px;
+    align-items: stretch;
+  }
+
   .about-card {
-    grid-column: 1 / -1;
-    order: 5;
+    grid-area: about;
   }
 
-  /* Stack и Contacts в одном ряду */
   .stack-card {
-    grid-column: 1;
-    order: 6;
-  }
+  grid-area: stack;
+
+  display: flex;
+  flex-direction: column;
+}
 
   .contact-card {
-    grid-column: 2;
-    order: 6;
+    grid-area: contact;
   }
 
-  .learning-card,
-  .expertise-card,
-  .about-card,
-  .stack-card,
-  .contact-card {
-    padding: 20px;
+
+  /* В половинной Stack-карточке 3 колонки уже тесноваты */
+  .stack-grid {
+  flex: 1;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+
+  align-items: stretch;
+}
+}
+
+@media (max-width: 460px) {
+
+  .preferences-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .footer-shell {
-    align-items: flex-start;
-    flex-direction: column;
+  .preference-row {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
   }
+
+  .segmented-control {
+    width: 100%;
+  }
+
+
+  .stack-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* остальное... */
+
+  .project-back-content > p:nth-of-type(n + 2) {
+    display: none;
+  }
+
+  .project-card.is-expanded .project-back-content > p {
+    display: block;
+  }
+
+  
 }

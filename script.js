@@ -684,22 +684,26 @@ function setLanguage(
     );
 
   const applyLanguage = () => {
-    document.documentElement.lang =
-      selectedLanguage;
+  document.documentElement.lang =
+    selectedLanguage;
 
-    replaceTranslations(
-      selectedLanguage
-    );
+  replaceTranslations(
+    selectedLanguage
+  );
 
-    updateLanguageButtons(
-      selectedLanguage
-    );
+  updateLanguageButtons(
+    selectedLanguage
+  );
 
-    localStorage.setItem(
-      "language",
-      selectedLanguage
-    );
-  };
+  localStorage.setItem(
+    "language",
+    selectedLanguage
+  );
+
+  requestAnimationFrame(() => {
+    updateProjectMoreButtons();
+  });
+};
 
 
   if (!animate) {
