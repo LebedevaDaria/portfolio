@@ -1121,60 +1121,73 @@ img {
     padding-bottom: 52px;
   }
 
-  /* Сетка оставляет 2 колонки только для Stack + Contacts */
+  /* Одна основная колонка */
   .intro-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
-  /*
-    Убираем влияние промежуточных обёрток на сетку.
-    Карточки становятся непосредственными grid-элементами.
-  */
+  /* Позволяем свободно менять порядок карточек */
   .intro-left,
   .intro-left-bottom,
   .intro-right {
     display: contents;
   }
 
-  /* Hero — первая */
+  /* Hero */
   .hero-card {
-    grid-column: 1 / -1;
+    grid-column: 1;
     order: 1;
   }
 
   /* Preferences сразу после Hero */
   .preferences-card {
-    grid-column: 1 / -1;
+    grid-column: 1;
     order: 2;
   }
 
-  /* Затем обучение */
+  /* Learning */
   .learning-card {
-    grid-column: 1 / -1;
+    grid-column: 1;
     order: 3;
   }
 
-  /* Затем экспертиза */
+  /* Expertise */
   .expertise-card {
-    grid-column: 1 / -1;
+    grid-column: 1;
     order: 4;
   }
 
   /* About */
   .about-card {
-    grid-column: 1 / -1;
+    grid-column: 1;
     order: 5;
   }
 
-  /* Stack и Contacts в одном ряду */
+  /* Stack — отдельная строка */
   .stack-card {
     grid-column: 1;
     order: 6;
   }
 
+  /* 6 инструментов в один ряд */
+  .stack-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .stack-item {
+    width: auto;
+  }
+
+  /* Contacts — под Stack */
   .contact-card {
-    grid-column: 2;
-    order: 6;
+    grid-column: 1;
+    order: 7;
+  }
+
+  /* Три контактные кнопки снова в один ряд */
+  .contact-card .contact-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
   .learning-card,
@@ -1188,5 +1201,18 @@ img {
   .footer-shell {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Stack: 3 + 3 */
+  .stack-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Contacts: кнопки друг под другом */
+  .contact-card .contact-links {
+    grid-template-columns: 1fr !important;
   }
 }
