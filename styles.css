@@ -874,6 +874,28 @@ img {
   font-size: clamp(0.88rem, 1.05vw, 1rem);
 }
 
+.project-front .project-flip-button.is-pressed {
+  transform: scale(0.97);
+
+  color: #00F0FF;
+  border-color: rgba(0, 240, 255, 0.5);
+
+  box-shadow:
+    0 0 10px rgba(0, 240, 255, 0.18),
+    0 0 22px rgba(0, 240, 255, 0.08);
+}
+
+.project-flip-button--back.is-pressed {
+  transform: scale(0.97);
+
+  color: #FF8A00;
+  border-color: rgba(255, 138, 0, 0.55);
+
+  box-shadow:
+    0 0 10px rgba(255, 138, 0, 0.18),
+    0 0 22px rgba(255, 138, 0, 0.08);
+}
+
 .project-flip-button {
   position: absolute;
   right: 22px;
@@ -1205,13 +1227,6 @@ img {
 }
 
 @media (max-width: 480px) {
-
-  /* Stack: 3 + 3 */
-  .stack-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  /* Contacts: кнопки друг под другом */
   .contact-card .contact-links {
     grid-template-columns: 1fr !important;
     gap: 12px;
@@ -1241,5 +1256,24 @@ img {
     box-shadow:
       0 0 10px rgba(255, 138, 0, 0.18),
       0 0 22px rgba(255, 138, 0, 0.08);
+  }
+
+  .project-front {
+    display: grid;
+    grid-template-rows: 1fr auto auto;
+  }
+
+  .project-front-content {
+    position: static;
+    align-self: end;
+
+    padding: 24px 24px 0;
+  }
+
+  .project-front .project-flip-button {
+    position: static;
+
+    margin: 14px 24px 24px;
+    width: calc(100% - 48px);
   }
 }

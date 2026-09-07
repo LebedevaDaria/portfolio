@@ -914,3 +914,23 @@ const gap =
 
   scheduleProjectHeightSync();
 }
+
+document.querySelectorAll(".project-flip-button").forEach((button) => {
+  button.addEventListener("pointerdown", () => {
+    button.classList.add("is-pressed");
+  });
+
+  button.addEventListener("pointerup", () => {
+    setTimeout(() => {
+      button.classList.remove("is-pressed");
+    }, 120);
+  });
+
+  button.addEventListener("pointercancel", () => {
+    button.classList.remove("is-pressed");
+  });
+
+  button.addEventListener("pointerleave", () => {
+    button.classList.remove("is-pressed");
+  });
+});
