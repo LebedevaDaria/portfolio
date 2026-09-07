@@ -643,7 +643,7 @@ img {
 @media (hover: hover) and (pointer: fine) {
   .contact-links a:hover,
   .contact-links a:focus-visible {
-    color: #FF8A00;
+    color: var(--lime);
     border-color: rgba(255, 138, 0, 0.4);
 
     box-shadow:
@@ -1137,10 +1137,6 @@ img {
 @media (max-width: 600px) {
   .shell {
     width: min(var(--shell), calc(100% - 24px));
-  }
-
-  .section {
-    padding-bottom: 52px;
   }
 
   /* Одна основная колонка */
