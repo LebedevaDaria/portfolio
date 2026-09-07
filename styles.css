@@ -1270,7 +1270,8 @@ img {
     padding: 24px;
   }
 
-  .project-front .project-flip-button {
+  .project-front .project-flip-button,
+  .project-back .project-flip-button--back {
     width: 48px;
     min-width: 48px;
     height: 48px;
@@ -1289,11 +1290,13 @@ img {
   }
 
   /* Текст View details скрываем только на мобильном */
-  .project-front .project-flip-text {
+  .project-front .project-flip-text,
+  .project-back .project-flip-button--back span:not(.project-flip-arrow) {
     display: none;
   }
 
-  .project-front .project-flip-arrow {
+  .project-front .project-flip-arrow,
+  .project-back .project-flip-button--back .project-flip-arrow {
     margin: 0;
     font-size: 1rem;
   }
