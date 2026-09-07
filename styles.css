@@ -1267,13 +1267,35 @@ img {
     position: static;
     align-self: end;
 
-    padding: 24px 24px 0;
+    padding: 24px;
   }
 
   .project-front .project-flip-button {
-    position: static;
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    min-height: 48px;
 
-    margin: 14px 24px 24px;
-    width: calc(100% - 48px);
+    padding: 0;
+
+    right: 20px;
+    bottom: 20px;
+
+    border-radius: 999px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  /* Текст View details скрываем только на мобильном */
+  .project-front .project-flip-text {
+    display: none;
+  }
+
+  .project-front .project-flip-arrow {
+    margin: 0;
+    font-size: 1rem;
+  }
+
 }
